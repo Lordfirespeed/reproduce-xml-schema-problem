@@ -8,6 +8,8 @@ Working/*
 !Problem
 Problem/*
 
+!.github
+
 !*.xml
 !*.csproj
 !*.xsd
