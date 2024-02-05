@@ -1,0 +1,16 @@
+# exclude everything
+/*
+
+# include specifically
+!Working
+Working/*
+
+!Problem
+Problem/*
+
+!*.xml
+!*.csproj
+!*.xsd
+
+!*.sln
+!*.md

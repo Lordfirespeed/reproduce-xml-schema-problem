@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk"
+         xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://schemas.microsoft.com/developer/msbuild/2003 modified-msbuild.xsd"
+>
+    <PropertyGroup>
+        <!-- Test property from Microsoft.Build.CommonTypes.xsd -->
+        <TargetFramework>netstandard2.1</TargetFramework>
+        
+        <!-- Test property with string content only from modified-msbuild.xsd -->
+        <MySimpleProperty>abc123</MySimpleProperty>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <!-- Test item from Microsoft.Build.CommonTypes.xsd -->
+        <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+        
+        <!-- Test specific item from modified-msbuild.xsd -->
+        <MySpecificItem>
+            <MyMetaData>abc123</MyMetaData>
+        </MySpecificItem>
+
+        <!-- Test simple item from modified-msbuild.xsd -->
+        <MySimpleItem>foobar</MySimpleItem>
+
+        <!-- Test flexible item from modified-msbuild.xsd -->
+        <MyFlexibleItem>
+            <Something>with</Something>
+            <No>constraints</No>
+        </MyFlexibleItem>
+    </ItemGroup>
+    
+    <Target Name="Foo">
+        <!-- Test task from Microsoft.Build.CommonTypes.xsd -->
+        <Message Importance="high" Text="Hello, world!" />
+        
+        <!-- Test task from modified-msbuild.xsd -->
+        <MyTask MyParameter="true" />
+    </Target>
+</Project>
