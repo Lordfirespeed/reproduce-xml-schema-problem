@@ -8,7 +8,7 @@ Local file XML schema URIs function correctly (see `Working` directory) and mapp
 
 ## Reproduction steps
 
-1. Open the repository root in an IntelliJ platform IDE (preferably Rider, as it bundles the MSBuild
+1. Clone the repository and open its root in an IntelliJ platform IDE (preferably Rider, as it bundles the MSBuild
    XML schema)
 2. Open the file `Working/modified-msbuild.xsd`. Take note that the referenced schema location on line 8
    is a locally available filepath. 
